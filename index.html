@@ -8,6 +8,15 @@
     <link rel="shortcut icon" href="https://logohistory.net/wp-content/uploads/2023/12/Gmail-Logo.svg" type="image/x-icon">
     <!-- tailwind css CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 12px;
+        background-color: white;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: rgb(185, 185, 185);
+      }
+    </style>
   </head>
   <body class="bg-gray-100 flex flex-col h-screen">
     <!-- header -->
@@ -21,11 +30,11 @@
           </div>
         </div>
         <div class="bg-blue-100 bg-opacity-40 w-full rounded-full flex items-center justify-between mx-2 px-2">
-          <div class="flex">
+          <div class="flex w-[90%]">
             <div class="p-[10px] cursor-pointer hover:bg-gray-200 rounded-full">
               <svg focusable="false" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M20.49,19l-5.73-5.73C15.53,12.2,16,10.91,16,9.5C16,5.91,13.09,3,9.5,3S3,5.91,3,9.5C3,13.09,5.91,16,9.5,16 c1.41,0,2.7-0.47,3.77-1.24L19,20.49L20.49,19z M5,9.5C5,7.01,7.01,5,9.5,5S14,7.01,14,9.5S11.99,14,9.5,14S5,11.99,5,9.5z"></path><path d="M0,0h24v24H0V0z" fill="none"></path></svg>
             </div>
-            <input class="w-[80%] bg-transparent outline-none text-lg font-medium" type="text" name="search box" placeholder="Search mail">
+            <input class="w-full bg-transparent outline-none text-lg font-medium" type="text" name="search box" placeholder="Search mail">
           </div>
           <div class="p-[10px] cursor-pointer hover:bg-gray-200 rounded-full">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"></path></svg>
@@ -110,8 +119,65 @@
         </div>
       </aside>
       <!-- email section -->
-      <section class="bg-white w-full rounded-2xl">
-
+      <section class="bg-white w-full rounded-2xl mb-4">
+        <!-- gmail section header -->
+        <div class="flex justify-between w-full h-14">
+          <!-- left side part -->
+          <div class="flex items-center py-2 px-3 w-44">
+            <div class="px-[6px] py-3 flex items-center rounded hover:bg-gray-100 duration-300 cursor-pointer">
+              <input class="w-4 h-4 cursor-pointer" type="checkbox">
+            </div>
+            <div class="opacity-80 px-1 py-3 rounded mr-2 hover:bg-gray-100 duration-300 cursor-pointer">
+              <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+            </div>
+            <div class="opacity-80 px-3 py-3 rounded-full hover:bg-gray-100 duration-300 cursor-pointer">
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z"/></svg>
+            </div>
+            <div class="opacity-80 px-3 py-3 rounded-full hover:bg-gray-100 duration-300 cursor-pointer">
+              <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/></svg>
+            </div>
+          </div>
+          <!-- right side part -->
+          <div class="flex items-center py-2">
+            <span class="text-gray-500 cursor-pointer hover:bg-gray-100 px-2 py-[10px] rounded-md text-sm mr-3">1-50 of 1,384</span>
+            <div class="mr-1 p-3 cursor-pointer hover:bg-gray-100 rounded-full">
+              <svg class="w-3 h-3 rotate-[270deg] opacity-40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
+            </div>
+            <div class="p-3 cursor-pointer hover:bg-gray-100 rounded-full">
+              <svg class="w-3 h-3 rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
+            </div>
+            <div class="ml-1 px-[6px] py-3 flex items-center rounded hover:bg-gray-100 duration-300 cursor-pointer">
+              <div class="bg-gray-700 w-5 h-3"></div>
+            </div>
+            <div class="mr-8 px-1 py-3 rounded mr-2 hover:bg-gray-100 duration-300 cursor-pointer">
+              <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- All emails here -->
+        <div class="w-full h-[462px] overflow-y-scroll">
+          <!-- select primary promotion and social mails section -->
+          <div class="flex items-center font-semibold border-b border-b-1 border-b-gray-300">
+            <div class="flex cursor-pointer w-[280px] hover:bg-gray-100 px-4 py-4 border-b border-b-[3px] border-b-blue-600">
+              <svg class="w-5 h-5 mr-4 mt-[2px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z"></path>
+              </svg>
+              <span class="text-blue-600">Primary</span>
+            </div>
+            <div class="flex cursor-pointer w-[280px] hover:bg-gray-100 px-4 py-4">
+              <svg class="w-5 h-5 mr-4 mt-[2px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z"></path>
+              </svg>
+              <span>Promotions</span>
+            </div>
+            <div class="flex cursor-pointer w-[280px] hover:bg-gray-100 px-4 py-4">
+              <svg class="w-5 h-5 opacity-50 mr-4 mt-[2px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/></svg>
+              <span>Social</span>
+            </div>
+          </div>
+          <div class="w-full h-[1600px]">All emails</div>
+        </div>
       </section>
       <!-- side bar -->
       <div class="px-2"> <!--  px-8 -->
